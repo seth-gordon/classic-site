@@ -1,0 +1,18 @@
+<head>
+<title>Sample Virtual CGI script Form</title>
+</head>
+<body>
+<h1>Sample Virtual CGI script Form</h1>
+<HR>
+This is a sample form that invokes a cgi script in your virtual_html/bin
+subdirectory. To install other CGI scripts, make sure you set them
+to be executable (chmod 755 <scriptname>).
+<FORM METHOD="POST" ACTION="/bin/samplecgi">
+<pre>
+<HR>
+<b>Click this
+<input type=submit VALUE=" SEND ">
+button now to run the script.
+</b>
+</FORM>
+</body>

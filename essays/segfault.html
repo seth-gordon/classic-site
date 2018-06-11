@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>Segfault -- Seth Gordon -- ropine.com</title>
+<link rel="stylesheet" href="/essay.css" type="text/css">
+</head>
+<body>
+<h2>Segmentation Fault: A Card Game</h2>
+
+<table align="right">
+<tr><td><img alt="What some of Alice's cards point to." src="segfault/sample-point-a.png"></td></tr>
+<tr><td><img alt="What some of Bob's cards point to." src="segfault/sample-point-b.png"></td></tr>
+<tr><td><img alt="What some of Carol's cards point to." src="segfault/sample-point-c.png"></td></tr>
+<tr><td><img alt="What some of Dave's cards point to." src="segfault/sample-point-d.png"></td></tr>
+</table></td>
+</tr></table>
+
+<h3>Introduction</h3>
+
+"Segmentation Fault" is a game for four to seven players, using a
+normal deck of playing cards (without jokers).  The gimmick behind the
+game is <em>indirect reference</em>: based on their value and
+position, cards can point to other cards, which may point to other
+cards, and so on.  In order to win the game, you need to keep track of
+which cards are pointing where, and figure out how to construct a trail of
+pointers from the cards in your hand to the cards you want to
+manipulate.
+
+<h3>Setting Up</h3>
+
+To start a hand of Segmentation Fault, shuffle the deck and deal each
+player six cards in a row, face-up.  Except as provided for in the
+rules, players may <em>not</em> rearrange the cards in front of them.
+Place the rest of the deck in the center of the table, face-down.
+Players will draw cards from that deck, and discard their cards in a
+face-up pile next to it.
+<p>
+The player with the highest-valued card (king highest) goes first.
+(If two or more players are tied for this honor, use the next-highest-valued
+cards in their hands as a tie-breaker.)  Play proceeds to the left.
+
+<h3>Referring to Cards in Other Players' Hands</h3>
+
+Any card in your hand, except a king, <em>points</em> to a card in your
+neighbor's hand, according to this scheme:
+
+<table>
+<tr><th  align="right">If your card is...</th>
+<th align="center">it points to this card...<br />(reading counter-clockwise)</th>
+<th align="left">of the player on your...</th></tr>
+<tr><td align="right">an ace</td><td align="center">first</td><td>left</td></tr>
+<tr><td align="right">a deuce</td><td align="center">second</td><td>left</td></tr>
+<tr><td align="right">a three</td><td align="center">third</td><td>left</td></tr>
+<tr><td align="right">a four</td><td align="center">fourth</td><td>left</td></tr>
+<tr><td align="right">a five</td><td align="center">fifth</td><td>left</td></tr>
+<tr><td align="right">a six</td><td align="center">last</td><td>left</td></tr>
+<tr><td align="right">a seven</td><td align="center">first</td><td>right</td></tr>
+<tr><td align="right">an eight</td><td align="center">second</td><td>right</td></tr>
+<tr><td align="right">a nine</td><td align="center">third</td><td>right</td></tr>
+<tr><td align="right">a ten</td><td align="center">fourth</td><td>right</td></tr>
+<tr><td align="right">a jack</td><td align="center">fifth</td><td>right</td></tr>
+<tr><td align="right">a queen</td><td align="center">last</td><td>right</td></tr>
+</table>
+<p class="stb">
+The four diagrams on the upper right show the same layout of cards
+from a game in progress.  The brown arrows show how some of the cards
+in the game point to other cards.  Note that the jack in Alice's hand
+points to a card in Dave's hand, while the jack in Bob's hand points
+to a card in Alice's hand.
+
+<img alt="Alice draws." align="left"
+src="segfault/draw.png">
+
+<h3>Moves</h3>
+
+Each player's move has four phases: draw, play, point, and swap.
+
+<h4>Draw</h4>
+
+Draw a the top card from the deck.  (If there are no cards left on the
+deck, shuffle the discard pile, flip it over, and draw the top card
+from there.)
+<p>
+In the diagram on the left, Alice has drawn the three of diamonds.
+
+<img alt="Alice plays." align="right"
+src="segfault/play.png">
+
+<h4>Play</h4>
+
+Decide which card you want to <em>play</em> in this move.  If you want
+to play the card you just drew, place it on the discard pile,
+face-up.  If you want to play a card that is already in your hand,
+place that card on the discard pile, and put the card that you drew in
+its place.
+<p>
+When you play the card, declare how many times you will be
+<em>pointing</em> in the next phase of your move; we will see
+what this means in the next section.
+<p>
+In the diagram on the right, Alice has decided to play the five of
+clubs, pointing three times.  She puts that card on the discard
+pile, declaring "Pointing three times", and puts the three of diamonds
+in its place.  She could have chosen to play any other card in her
+hand, or the three of diamonds itself.
+
+<img alt="Alice points three times." align="left"
+src="segfault/point.png">
+
+<h4>Point</h4>
+
+Indicate which card the card you just played is pointing to.  (For the
+purpose of the pointing rule, treat it as a card in your hand, even
+though you just discarded it.)  If you are pointing twice, indicate
+which card <em>that</em> card points to, and so on, until you have
+pointed the number of times you declared.
+<p>
+A king does not point to anything.  It's OK for your sequence of
+pointing to <em>end</em> on a king, but if you miscalculated and
+declared you were pointing <em>from</em> a king, you have committed a
+<em>segmentation fault</em>; you must throw away all your cards and drop
+out of this hand.
+<p>
+The diagram on the left shows the sequence of pointing from the card
+that Alice played.  Note that:
+<ol>
+<li> The hand that a card points to is determined by the card's
+position and number, and <em>not</em> by whose turn it is.  Even
+when it is Alice's turn, the eight in Carol's hand points to a
+card on Carol's right, <em>not</em> to a card on Alice's right.
+<li> The sequence of pointing ends on Bob's king.  This is fine.  If,
+however, Alice had said "pointing <em>four</em> times" instead of
+"pointing three times", she would have committed a segmentation fault
+and lost the hand.  She would have thrown away all her cards, and
+Bob's jack, which had previously pointed to Alice's queen of hearts,
+would point to Dave's ten of clubs.
+</ol>
+
+<img alt="Alice swaps and wins." align="right"
+src="segfault/swap.png">
+
+<h4>Swap</h4>
+
+Take the last card that you pointed to and swap it with any card in
+your hand.
+<p>
+In the diagram on the right, Alice swaps the king, the last card
+pointed to in the previous phase, and swaps it for her six.  She could
+have swapped it with any other card in her hand.
+
+<h3>Victory</h3>
+
+You win the hand if, at the end of your turn, the cards in your hand
+(<em>not</em> including the card you have played) have
+any of the following:
+
+<ul>
+<li>Four cards with the same number.  (They do not have to be next to
+each other.)</li>
+
+<li>At least five cards in a sequence, like a "straight" in poker.
+(Those cards do not have to be <em>arrayed in order</em> in front of
+you, as long as they're all <em>there</em>.)  The ace follows the king
+<em>and</em> precedes the deuce: Q-K-A-2-3-4 is a winning hand.
+</li>
+
+<li>All six cards of the same suit.</li>
+</ul>
+
+In the diagram on the right, after she acquires Bob's king, Alice has
+a straight, and therefore wins the hand.
+If Alice had not won the hand, another player would have: Bob was one
+move away from a flush, and both Carol and Dave were one move away
+from four of a kind.
+
+<h3>Acknowledgements</h3>
+
+Thank you to the people who playtested and commented on earlier
+versions of this game: Jennifer Gordon,
+Amy Bernstein,
+Chana Gershon,
+Andrew Greene,
+Heather Greene,
+Jon Kamens,
+and Rachael Nislick.
+<p>
+The diagrams on this page were made with the help of yudit, unifont,
+ImageMagick and the GIMP.
+
+<p class="stb" align="right"><i>
+<a href="http://www.ropine.com">Seth Gordon</a> // <a
+href="mailto:sethg@ropine.com">sethg@ropine.com</a> // August 2003 //
+<a href="http://greenspun.com/com/ropine/essays/segfault.html">comments?</a></i>
+</body>
+
+</html>

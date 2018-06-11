@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>Trackback -- Seth Gordon -- ropine.com</title>
+<link rel="stylesheet" href="/essay.css" type="text/css">
+</head>
+<body>
+<h2>Notes on the Background of Back-Links</h2>
+
+<p class="mtb"> <h3>In the Beginning was the Link</h3>
+Every click on a hyperlink sends a message with a return address.
+That address, the <em>referrer</em>, is the URL of the page containing
+the link.  It is also a compromise between two different visions of
+hypertext.
+<p>
+When Tim
+Berners-Lee was designing the protocols for the World-Wide Web, one
+issue he contemplated was: <a
+href="http://www.w3.org/DesignIssues/Topology.html#14">Should links be
+one-way or two-way?</a> On the one hand, since a link communicates
+information about the relationship between two documents, readers of
+either document might want to know about the relationship, so links
+should work in both directions.  On the other hand, if two documents
+are being managed by two different authorities (e.g., <a
+href="http://nytimes.com">The New York Times</a> and <a
+href="http://spinsanity.org/">Spinsanity</a>), a protocol that requires
+two-way links would require both authorities to cooperate with each
+other to maintain the links.
+<p>
+<a href="http://infomesh.net/2001/enquire/manual/">ENQUIRE</a>, an
+earlier hypertext system that Berners-Lee wrote, used <a
+href="http://infomesh.net/2001/enquire/manual/p7.gif">two-way
+links</a>, but this was a system where all the linked information was
+on one server.  For the Web, Berners-Lee adopted <a
+href="http://www.w3.org/DesignIssues/BuildingBackLinks.html">a
+technique</a> proposed by Phillip Hallam-Baker: use one-way links, but
+allow the server to find out where a page is being linked from.  The
+server of the page being linked to can use this information, or ignore it.
+<h3>Using the Referrer</h3>
+Any system for CGI scripting has a way to access the referrer (or, as
+the HTTP standard calls it, the "referer").  In
+Perl, for example, using the CGI module, you can do it like this...
+<blockquote><pre>
+#!/usr/bin/perl
+use CGI qw/:standard/;
+print header("text/plain"),
+  "To get here, you clicked on a link from ", referer();
+</pre></blockquote>
+...to generate a page like
+<a href="http://dynamic.ropine.com/tb/example1.pl">this one</a>.
+This is how, for example, many <a
+href="http://www.decafbad.com/afasadst">custom 404 pages</a> point
+back to the page with the dead link.
+<p>
+If you don't mind information from complete strangers filling up your
+hard drive, you can write a slightly more complicated script, and make
+a permanent record of pages linked to your own:
+<blockquote><pre>
+#!/usr/bin/perl -T
+use CGI qw/:standard/;
+
+# ignore URLs with invalid characters
+if (referer() =~ m|^([-\w?.+\%/:&]+)$|) {
+  $r = $1 . "\n";
+} else {
+  $r = '';
+}
+
+open REFERIN, "./referers" or die "Can't open the referers file for input: $!";
+@referers = &lt;REFERIN&gt;;
+close REFERIN;
+if ($r) {
+  $foundit = grep { $_ eq $r } @referers;
+  unless ($foundit) {
+    open REFEROUT, ">>./referers" or
+      die "Can't open the referers file for output: $!";
+    print REFEROUT $r;
+    close REFEROUT;
+    push @referers, $r;
+  }
+}
+
+print header, start_html("Example 2"),
+  p("Links to this page have been followed from the following URLs:"),
+  ul(li(\@referers));
+</pre></blockquote>
+Now, if you create a Web
+page with a link to <a
+href="http://dynamic.ropine.com/tb/example2.pl">this page</a>, and
+click on the link, you can see your page's URL in the list.
+
+<h3>Using the Referer, Practically</h3>
+
+That script is fine as a proof of concept, but it's not very useful.
+If our page accumulates inbound links over a long period of time, the
+only way to trim the list would be to manually edit the "referers"
+file.  If a link to our page appears in a Slashdot comment, which can
+be viewed through a variety of URLs (as a standalone comment, as part
+of a threaded comments page, as part of a nested comments page, as
+part of a nested comments page with threshold 2, etc.), then every one
+of those URLs could appear in our list.  Most importantly, since this
+is a CGI script, the only way we could append a list of inbound links
+to a regular HTML page is by turning that page into a CGI script.
+<p>
+To work around these problems, a number of programmers have provided
+<a href="http://www.disenchanted.com/dis/linkback.html">self-contained
+scripts</a> that can keep track of inbound links and display them on your
+page, with a minimum of effort on your part.  For example,
+<a href="http://www.downes.ca/">Stephen Downes</a> has a <a
+href="http://www.downes.ca/referrers.htm">system</a> that is based on
+Javascript: you add a little Javascript to your page, and when someone
+reads it, if his or her browser supports Javascript, it calls up a CGI
+script on <em>his</em> site, and where the HTML source had Javascript,
+the browser shows a list of links.  So, even though the server for
+this page does not support CGI scripts, if your browser has Javascript
+enabled, you can see a list of links to this page right here:
+<blockquote>
+<script language="Javascript" src="http://www.downes.ca/referrers.js"></script>
+</blockquote>
+<p>
+Log files provide another source of referral information.  If your Web
+server uses the <a
+href="http://httpd.apache.org/docs/logs.html#combined">Combined Log
+Format</a>, its log file should have lines like
+<blockquote><tt>
+192.168.1.1 - - [01/Apr/2003:14:58:54 -0500] "GET /tb/example2.pl
+HTTP/1.1" 200 390 <b>"http://ropine.com/essays/trackback.html"</b>
+"Mozilla/5.0 Galeon/1.2.5 (X11; Linux i686; U;) Gecko/20020623 Debian/1.2.5-0.woody.1"
+</tt></blockquote>
+The field marked in <b>boldface</b> is the referrer.
+<p>
+<a href="http://diveintomark.org/">Mark Pilgrim</a> has written <a
+href="http://diveintomark.org/projects/pysitestats/index.html">PySiteStats</a>,
+a Python system that generates reports from access logs.  Among other
+things, this system can produce a <a
+href="http://diveintomark.org/about/stats/referers.html">list of referrers</a>.
+
+<h3>From the Referer to Trackback</h3>
+
+The folks at Movable Type have created a lot of buzz in the weblog
+community with their <a
+href="http://www.movabletype.org/docs/mttrackback.html">Trackback</a>
+standard.  In a weblog that uses Trackback, every weblog entry or
+category has a "Trackback URL".  This URL doesn't point to a normal
+Web page, or even to a CGI script that outputs HTML.  Instead, the
+authors of other weblogs can use tools on their end (such as, ahem, <a
+href="http://www.movabletype.org/trackback/beginners/">Movable
+Type</a>'s blog-entry editor) to "ping" this URL with information
+about the relationship between two blog entries.
+<p>
+Why would anyone
+go through all this trouble to announce that they've commented on
+someone else's weblog, when they have HTTP referrers for free?  The
+Trackback protocol has a number of features that ordinary referrers
+don't have.
+<ul>
+<li>If the weblogs at both ends have Trackback configured properly,
+commenting on another weblog using the Trackback protocol is as easy
+as replying to an email message.
+<li>With most weblog systems, each entry in a weblog
+can be read through at least three URLs: one for the weblog's main
+page, one for the entry's "permalink", and one for the weekly or
+monthly archive that contains the entry.  A referrer-based system
+cannot reliably tell that three URLs containing links to a certain
+page are actually three views of the same content.  A Trackback ping
+will send the permalink for the entry containing the comment, and
+nothing else.
+<li>The Trackback ping may also contain an excerpt from the comment
+being made, the title of the entry with the comment, and the title of
+the blog with the comment.  The referrer contains only a URL.
+<li>Weblog categories, as well as individual entries, can contain
+Trackback URLs.  For example, <a href="http://theredkitchen.net/">The
+Red Kitchen</a>, a cooks' weblog, has a Trackback-based system for <a
+href="http://theredkitchen.net/guest.html">guest recipe
+submissions,</a> as well as Trackback URLs attached to <a
+href="http://love-productions.com/mt/mt-tb.cgi?__mode=view&entry_id=7507">individual
+recipes</a>.
+<li>A referrer can announce a link between two Web pages, but not the
+intention of the person making a link.  A Trackback ping sends a
+clear signal: "I made a comment on what you wrote, and I want you to
+see it."  It's the difference between observing who can hear what you
+say, and knowing who has joined your conversation.
+</ul>
+
+<h3>On Beyond Trackback</h3>
+Back at the dawn of the Web, when Berners-Lee wondered whether or not
+to allow two-way links, he also wondered: <a
+href="http://www.w3.org/DesignIssues/Topology.html#4">Should there be
+different types of links?</a>  Again, when he designed HTTP, he chose
+not to imitate the design of his earlier system.
+<p>
+The two-way links of
+ENQUIRE could describe six kinds of relationships:
+<ol>
+<li>uses / used-by
+<li>includes / part-of
+<li>made / made-by
+<li>describes / described-by
+<li>background / detail
+<li>similar-to / other
+</ol>
+But in HTTP, a link is a link is a link, and any information about
+<em>what kind of</em> link has been made has to be carried "out of band".
+<p>
+The Trackback protocol provides one way to carry this
+information&#8212;to announce that one page <em>comments on</em> or
+<em>is commented on by</em> another.  More importantly, the weblogging
+tools that implement Trackback make it easy for users to exploit the protocol.
+<p>
+What's next?  What other protocols and authoring tools can enrich our
+experience of reading, writing, and linking on the Web?  Which of
+these tools will actually become popular with the users, and which
+will remain stuck in the land of "if only everyone did this"?  Stay
+tuned, true believers....
+
+<p class="stb" align="right"><i>
+<a href="http://ropine.com/sethg/cv.html">Seth Gordon</a> // <a
+href="mailto:sethg@ropine.com">sethg@ropine.com</a> // April 2003
+</body>
+
+</html>
