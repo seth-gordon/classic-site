@@ -1,0 +1,117 @@
+BODY { color: #000; background-color: #CC9; }
+
+html { width: 97%; }
+
+/* CCC = light gray
+   CCF = periwinkle blue
+   CFC = light green
+   CFF = light blue
+   FCC = magenta
+   FCF = purple
+   FFC = light yellow
+   FFF = white
+*/
+
+#header {
+  left: 0;
+  width: 70%;
+  padding: 5px;
+  padding-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #FFC;
+}
+
+#leftcol {
+  position: absolute;
+  left: 8px;
+  width: 150px;
+  margin-left: 10px;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #FFC;
+  font-size: smaller;
+}
+
+#leftcol input { width: 150px; font-size: smaller; }
+
+#leftcol ul {
+  list-style: circle;
+  margin-left: 3px;
+  padding-left: 1em;
+  text-indent: 0;
+}
+
+#content {
+  margin: 0 30% 0 180px;
+  padding: 5px;
+}
+
+#content A:visited {
+  color: #966;
+}
+
+#content UL {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+#rightcol {
+  position: absolute;
+  left: 70%;
+  width: 140px;
+  color: #FFF;
+  background-color: #666;
+  margin-left: 10px;
+  padding: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: smaller;
+  border-left: 5px solid #CC9;
+}
+
+.filmstrip {
+  border-left: 10px dotted #CC9;
+  border-right: 10px dotted #CC9;
+}
+
+.filmstrip img {
+  margin: 8px;
+  border: 2px solid #999;
+}
+
+.noscreen { display: none }
+
+h1 { text-align: right; margin: 0.5em; margin-bottom: 0; }
+h1:first-letter { color: #999 }
+.subhead { display: block; font-size: smaller; }
+h2 { margin-top: 0; }
+
+.comment
+ { color: #C00 ; text-decoration: none }
+.comment A:link { color: #C09 ; text-decoration: underline }
+.comment A:visited { color: #900 ; text-decoration: underline }
+.comment A:active { color: #F00 ; text-decoration: underline }
+.newterm { font-style: italic }
+
+OL { list-style-type: decimal }
+OL OL { list-style-type: lower-alpha }
+OL OL OL { list-style-type: lower-roman }
+
+H5 { font-size: 100%; font-style: italic; font-weight: normal }
+H4 { font-size: 100%; font-style: italic; font-weight: normal;
+     text-decoration: underline }
+
+SUP { font-size: smaller }
+
+P { margin-top: 0pt; margin-bottom: 0pt; text-indent: 0.2in }
+P.stb { margin-top: 12pt }
+P.mtb { margin-top: 24pt; text-indent: 0in }
+P.ltb { margin-top: 36pt; text-indent: 0in }
+
+p.marginnote { background-color: #E0E0E0 }
+
+
+

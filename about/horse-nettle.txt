@@ -1,0 +1,50 @@
+OpenBSD 3.1 (GENERIC) #59: Sat Apr 13 15:28:52 MDT 2002
+    deraadt@i386.openbsd.org:/usr/src/sys/arch/i386/compile/GENERIC
+cpu0: Intel 486SX ("GenuineIntel" 486-class)
+cpu0: V86
+real mem  = 33144832 (32368K)
+avail mem = 25214976 (24624K)
+using 430 buffers containing 1761280 bytes (1720K) of memory
+User Kernel Config
+UKC> disable scsibus
+ 21 scsibus* disabled
+UKC> quit
+Continuing...
+mainbus0 (root)
+bios0 at mainbus0: AT/286+(00) BIOS, date 08/08/93
+pcibios at bios0 function 0x1a not configured
+bios0: ROM list: 0xc0000/0x8000 0xd4000/0x4000
+isa0 at mainbus0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+vga0 at isa0 port 0x3b0/48 iomem 0xa0000/131072
+wsdisplay0 at vga0: console (80x25, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+wdc0 at isa0 port 0x1f0/8 irq 14
+wd0 at wdc0 channel 0 drive 0: <ST34311A>
+wd0: 16-sector PIO, LBA, 4126MB, 8944 cyl, 15 head, 63 sec, 8452080 sectors
+wd0(wdc0:0:0): using BIOS timings
+wdc1 at isa0 port 0x170/8 irq 15
+atapiscsi0 at wdc1 channel 0 drive 0
+scsibus at atapiscsi0 not configured
+atapiscsi0(wdc1:0:0): using BIOS timings
+ep0 at isa0 port 0x300/16 irq 11: address 00:a0:24:68:e7:cc, utp/aui (default utp)
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: <PC speaker>
+sysbeep0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+isapnp0 at isa0 port 0x279: read port 0x203
+ne3 at isapnp0 "Plug & Play Ethernet Card, RTL8019, PNP80D6, " port 0x280/32 irq 3
+ne3: NE2000 (RTL8019) Ethernet
+ne3: address 00:40:33:db:60:14
+biomask c040 netmask c848 ttymask c8ca
+pctr: no performance counters in CPU
+dkcsum: wd0 matched BIOS disk 80
+root on wd0a
+rootdev=0x0 rrootdev=0x300 rawdev=0x302

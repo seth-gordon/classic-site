@@ -1,0 +1,45 @@
+BODY { color: #000; background-color: #FFC;
+       /*
+       background-image: url(atropine-translucent.png);
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-position: 20px 20px
+       */
+}
+
+/* CCC = light gray
+   CCF = periwinkle blue
+   CFC = light green
+   CFF = light blue
+   FCC = magenta
+   FCF = purple
+   FFC = light yellow
+   FFF = white
+*/
+
+.comment
+ { color: #C00 ; text-decoration: none }
+.comment A:link { color: #C09 ; text-decoration: underline }
+.comment A:visited { color: #900 ; text-decoration: underline }
+.comment A:active { color: #F00 ; text-decoration: underline }
+.newterm { font-style: italic }
+
+OL { list-style-type: decimal }
+OL OL { list-style-type: lower-alpha }
+OL OL OL { list-style-type: lower-roman }
+
+H5 { font-size: 100%; font-style: italic; font-weight: normal }
+H4 { font-size: 100%; font-style: italic; font-weight: normal;
+     text-decoration: underline }
+
+SUP { font-size: smaller }
+
+P { margin-top: 0pt; margin-bottom: 0pt; text-indent: 0.2in }
+P.stb { margin-top: 12pt }
+P.mtb { margin-top: 24pt; text-indent: 0in }
+P.ltb { margin-top: 36pt; text-indent: 0in }
+
+p.marginnote { background-color: #E0E0E0 }
+
+
+

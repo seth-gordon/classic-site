@@ -1,0 +1,104 @@
+[ using 378156 bytes of bsd ELF symbol table ]
+console out [ATY,Rage128Pd]console in [keyboard] USB found
+: memaddr 94000000 size 4000000, : consaddr 96008000, : ioaddr 90020000, size 20000: memtag 8000, iotag 8000: width 640 linebytes 768 height 480 depth 8
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California.  All rights reserved.
+Copyright (c) 1995-2004 OpenBSD. All rights reserved.  http://www.OpenBSD.org
+
+OpenBSD 3.5-stable (CAYENNE) #1: Sun Jul 25 14:06:29 EDT 2004
+    root@cayenne.ropine.com:/usr/src/sys/arch/macppc/compile/CAYENNE
+real mem = 1073741824 (1048576K)
+avail mem = 979030016 (956084K)
+using 1254 buffers containing 53686272 bytes of memory
+mainbus0 (root)
+cpu0 at mainbus0: 7400 (Revision 209): 400 MHz: 1MB backside cache
+memc0 at mainbus0: uni-n
+mpcpcibr0 at mainbus0: uni-north, Revision 0xff
+pci0 at mpcpcibr0 bus 0
+pchb0 at pci0 dev 11 function 0 "Apple Uni-N AGP" rev 0x00
+vgafb0 at pci0 dev 16 function 0 "ATI Rage Fury" rev 0x00, mmio
+wsdisplay0 at vgafb0: console (std, vt100 emulation)
+mpcpcibr1 at mainbus0: uni-north, Revision 0xff
+pci1 at mpcpcibr1 bus 0
+pchb1 at pci1 dev 11 function 0 "Apple Uni-N" rev 0x00
+ppb0 at pci1 dev 13 function 0 "DEC 21154 PCI-PCI" rev 0x05
+pci2 at ppb0 bus 1
+ahc0 at pci2 dev 3 function 0 "Adaptec AHA-2940U" rev 0x01: irq 53
+scsibus0 at ahc0: 16 targets
+sd0 at scsibus0 targ 1 lun 0: <SEAGATE, SX118273LC, 6678> SCSI2 0/direct fixed
+sd0: 17366MB, 7501 cyl, 20 head, 237 sec, 512 bytes/sec, 35566480 sec total
+sd1 at scsibus0 targ 2 lun 0: <SEAGATE, SX118273LC, 6678> SCSI2 0/direct fixed
+sd1: 17366MB, 7501 cyl, 20 head, 237 sec, 512 bytes/sec, 35566480 sec total
+sd2 at scsibus0 targ 3 lun 0: <SEAGATE, SX118273LC, 6678> SCSI2 0/direct fixed
+sd2: 17366MB, 7501 cyl, 20 head, 237 sec, 512 bytes/sec, 35566480 sec total
+macobio0 at pci2 dev 7 function 0 "Apple Keylargo" rev 0x03
+openpic0 at macobio0: version 0x4614
+gpio_obio0 at macobio0
+gpio_obio1 at gpio_obio0 irq 47
+programmer-switch at gpio_obio0 not configured
+zsc0 at macobio0: irq 22,50
+zstty0 at zsc0 channel 0
+zstty1 at zsc0 channel 1
+awacs0 at macobio0: irq 24,9,10 headphones
+audio0 at awacs0
+adb0 at macobio0 irq 25: via-pmu 0 targets
+aed0 at adb0 addr 0: ADB Event device
+apm0 at adb0: battery flags 0x1, 0% charged
+ki2c0 at macobio0
+wdc0 at macobio0 irq 19: DMA
+wdc1 at macobio0 irq 20: DMA
+atapiscsi0 at wdc1 channel 0 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HITACHI, DVD-ROM GD-7000, 016E> SCSI0 5/cdrom removable
+wd1 at wdc1 channel 0 drive 1: <Maxtor 92049U3>
+wd1: 16-sector PIO, LBA, 19536MB, 40010544 sectors
+cd0(wdc1:0:0): using BIOS timings, DMA mode 2
+wd1(wdc1:0:1): using BIOS timings, DMA mode 2
+wdc2 at macobio0 irq 21: DMA
+ohci0 at pci2 dev 8 function 0 "Apple USB" rev 0x00: irq 27, version 1.0
+usb0 at ohci0: USB revision 1.0
+uhub0 at usb0
+uhub0: Apple OHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+ohci1 at pci2 dev 9 function 0 "Apple USB" rev 0x00: irq 28, version 1.0
+usb1 at ohci1: USB revision 1.0
+uhub1 at usb1
+uhub1: Apple OHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+uhub2 at uhub1 port 1
+uhub2: Mitsumi Electric Hub in Apple Extended USB Keyboard, class 9/0, rev 1.10/1.22, addr 2
+uhub2: 3 ports with 2 removable, bus powered
+uhidev0 at uhub2 port 1 configuration 1 interface 0
+uhidev0: Mitsumi Electric Apple Extended USB Keyboard, rev 1.10/1.22, addr 3, iclass 3/1
+ukbd0 at uhidev0: 8 modifier keys, 6 key codes
+wskbd0 at ukbd0 (mux 1 ignored for console): console keyboard, using wsdisplay0
+uhidev1 at uhub2 port 1 configuration 1 interface 1
+uhidev1: Mitsumi Electric Apple Extended USB Keyboard, rev 1.10/1.22, addr 3, iclass 3/0
+uhidev1: 3 report ids
+uhid0 at uhidev1 reportid 2: input=1, output=0, feature=0
+uhid1 at uhidev1 reportid 3: input=3, output=0, feature=0
+uhidev2 at uhub2 port 3 configuration 1 interface 0
+uhidev2: Macally Macally USB Optical Mini Net Mouse, rev 1.00/2.00, addr 4, iclass 3/1
+ums0 at uhidev2: 3 buttons and Z dir.
+wsmouse0 at ums0 mux 0
+"Texas Instruments TSB12LV26 FireWire" rev 0x00 at pci2 dev 10 function 0 not configured
+mpcpcibr2 at mainbus0: uni-north, Revision 0xff
+pci3 at mpcpcibr2 bus 0
+pchb2 at pci3 dev 11 function 0 "Apple Uni-N Eth" rev 0x00
+gem0 at pci3 dev 15 function 0 "Apple GMAC" rev 0x01
+gem0: address 00:30:65:ab:98:5e
+brgphy0 at gem0 phy 0: BCM5400 1000baseTX PHY, rev. 7
+bmtphy0 at gem0 phy 31: BCM5201 10/100 media interface, rev. 2
+gem0: cannot accommodate MII device bmtphy0 at phy 31, instance 1
+gem0: using irq 41 for interrupt
+Kernelized RAIDframe activated
+ahc0: target 1 using 16bit transfers
+ahc0: target 1 synchronous at 20.0MHz, offset = 0x8
+ahc0: target 2 using 16bit transfers
+ahc0: target 2 synchronous at 20.0MHz, offset = 0x8
+ahc0: target 3 using 16bit transfers
+ahc0: target 3 synchronous at 20.0MHz, offset = 0x8
+raid1 (root): (RAID Level 5) total number of sectors is 41939392 (20478 MB)
+raid0 (root): (RAID Level 5) total number of sectors is 2047552 (999 MB) as root
+bootpath: '/pci@f2000000/@d/mac-io@7/ata-3@20000/disk@1/bsd'
+swapmount: no device

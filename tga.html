@@ -1,0 +1,127 @@
+<html>
+<title>Instructions for PE TGS-2 TGA</title>
+
+<head>
+<h2>Running the TGA</h2></head>
+
+<body>
+
+The TGS-2 maximum temperature is 900 <sup>o</sup>C.  It can perform only a single ramp, at a set ramp rate, from one temperature to another.  Isothermal data collection (maintaining temperature at a set value for a given time while monitoring the balance output) and multiple ramp periods are not within the capability of the software.  It may be possible to achieve isothermal data collection or multiple ramp periods using the System 4 controller to run the furnace and a stripchart recorder/X-Y plotter to record data - consult the System 4 and TGS-2 manuals (blue binders) to see how to do this.
+
+<h3>Getting Started</h3>
+
+<ol>
+<li>The program disk (TADS system disk) should be in Drive A and your data disk (5.25" floppy) should be in Drive B.</li>
+
+<li>Turn on the interface (switch in front, left).<br>
+	Turn on the heater control to load.<br>
+	Turn on the main computer (switch in back, right).<br>
+	Turn on the System 4 unit (swtich in front, left).<br>
+	Turn on the plotter (in back of the tower of TGA boxes).<br></li>
+
+<li>The monitor will come on after a few seconds.  Enter the time and date in the format given on the screen.</li>
+
+<li>At the PETOS> prompt, type TADS using the computer keyboard, then hit <b>return.</b></li>
+
+<li>On the computer keyboard, hit the <b>goto setup</b> key.  This is a blue key along the top row of the keyboard, under the "library" section.</li>
+
+<li>Give your sample an ID# or a sample name; enter your name.</li>
+
+<li>On the computer keyboard, press the <b>modify parameters</b> key.  This is a blue key along the top row of the keyboard, under the "set-up" section.<br>
+	You will see the last set of run parameters come up on the screen.  To enter a new value, type the value using the computer keyboard, then hit <b>return.</b>  To keep a value, just hit <b>return.</b>  All temperatures are in <sup>o</sup>C.</br>
+	<u>T-final:</u>  this is the temperature the TGA will run to.<br>
+	<u>T-min:</u>  this is the earliest temperature that the software will acknowledge, NOT the start temperature of the run.<br>
+	<u>Temp 1:</u>  this is the start temperature of the run.  Save yourself confusion by always setting T-min = Temp 1.<br>
+	<u>T Incr:</u>  this is the number of degrees between marks on the plot abscissa, and has nothing to do with the run conditions.  Pick some convenient subdivision of your total temperature range.<br>
+	<u>Y-Range:</u> this is the range of values to be plotted on the Y-axis in weight%.  Generally 100 is a good value.<br>
+	<u>Heating Rate:</u> how fast you want the temperature to ramp, in <sup>o</sup>C/min.<br>
+	<u>Cooling Rate:</u> how fast you want the furnace to cool after the run is over, in <sup>o</sup>C/min.  Generally 320, which is the maximum cooling rate available, is a good value.<br>
+	<u>Sample wt:</u> you will measure this value later, so just hit <b>return</b> here.<br>
+	<u>Plot:</u> this is for cases where you can send data to a plotter as you obtain it.  Just type N, or hit <b>return</b> if N is already there.  You will send your data to the plotter in a later step.<br></li>
+
+<li>Carefully lower the glass tube and furnace assembly on the left of the TGA unit by loosening the thumbscrew (on the pole between the two glass tubes) and pulling down gently.  You may need to shift the glass tube separately.  Be careful: it's fragile, and we have only one.  Lower the assembly far enough that the sample stage will clear it.  Swing the sample stage over to the left, then bring it up to just under the balance pan.<br>
+
+IMPORTANT:  Do not turn the thumbscrew which is underneath the furnace assembly.  This will raise/lower the furnace itself within its assembly, and should only be turned when you are calibrating using the Curie standards.</li>
+
+<li>Check that the balance pan is empty and clean.  If you have done this by removing it from the hangdown hook, carefully re-hang it, then swing the sample stage out of the way.  Raise the glass tube and furnace assembly until the tube seals against the O-ring at the top of the balance assembly.  Check that the pan hangs in the center of the furnace; if not, spray the outside of the glass tube liberally with Static Guard and/or touch your hands to the tube and to ground to drain away the static charge built up on the tube.</li>
+
+<li>On the computer keyboard, press the <b>zero</b> key.  This is a blue key along the top row, to the right of the <b>modify parameters</b> key.  When the reading stabilizes, press Y.  (No <b>return</b> required.)</li>
+
+<li>Lower the glass tube and furnace assembly as in Step 8.</li>  
+
+<li>Remove the basket from the hangdown wire, and place 4-10 mg of sample in the pan.  Re-hang the pan and raise the glass tube and furnace assembly as in Step 9.</li>
+
+<li>On the computer keyboard, press the <b>read weight</b> key, which is found to the right of the <b>zero</b> key.  When the weight is stable, enter Y.  (If the weight is outside the 4-10 mg limits, re-open the furnace assembly and adjust the quantity of material in the pan as needed.)</li>
+
+<li>On the System 4 keyboard, press the <b>setup</b> button.  It should light, as will the <b>T min</b> button.  A number will appear in the red LED readout.  (The default display here is the realtime thermocouple readout, i.e. the temperature in the furnace)  This number represents the start temperature for your run.  Be sure this value is the same as the number you entered for <u>Temp 1</u> during Step 7.  If it is not, enter the new value using the number pad on the System 4 unit, then hit <b>enter</b> on this keyboard.<br>
+
+IMPORTANT:  The System 4 unit is responsible for controlling what the furnace does in terms of start temperature, heating rate, end temperature, and cooling rate.  The computer portion of this instrument does not have any feed from the thermocouple, i.e. all temperatures shown on the monitor are extrapolated based on the start temperature, ramp rate, and time since start of run.  If the values entered in Steps 14-16 and in Step 7 do not match, your data will be completely useless.</li>
+
+<li>After you hit <b>enter</b>, the <B>T max</b> button should light.  Enter the same value as for <u>T-final</u> in Step 7, and hit <b>enter.</b></li>
+
+<li>The <b>Heat Rate</b> button should light: enter the same value as for <u>Heating Rate</u> in Step 7 and hit <b>enter.</b>  Likewise, the <b>Cool Rate</b> value should be made to match what you entered for <u>Cooling Rate</u> in Step 7.  The <b>T Span</b> lights next; enter any value larger than the difference between <b>T max</b> and <b>T min</b>.</li>
+
+<li>Hit the <b>Load</b> button (it should light) and then the <b>Modify</b> button (it should also light).  Enter the starting temperature (same as <u>T-min</u> under Step 7) on the keypad, then hit enter.</li>
+
+<li>Check the gas flow.  Usual settings are 8-10 psig, and approx. 100 SCCM.</li>
+
+<li>To begin the run: <br> 
+Turn the heater control to <b>heat</b><br>
+On the System 4 keyboard hold <b>reset</b> and <b>go to load</b> simultaneously.  The latter key should light, and the red LED display should show a rising temperature.  The temperature will go to the start temp. value + 5 <sup>o</sup>C and the <B>go to load</b> light will turn off; the light near <em>load</em> (left side of System 4) will turn on.<br>  
+On the computer keyboard, hit the <b>start</b> button twice (a blue key found to the right of the <b>read weight</b> key).  Ignore the on-screen warning "Check temp."  The <b>heat</b> button on the System 4 should light up, and the run should begin.<br>
+
+<u>NOTE 1:</u>  The monitor is literally irreplaceable.  Turn the brightness on the screen down during the run and after you finish with the instrument, or shut it down completely.<br>
+
+<u>NOTE 2:</u>  The furnace has been calibrated using Curie standards.  Do not change any of the other knobs on the heater or balance control units unless you know what you are doing.  Directions for calibration may be found in the TGS-2 manual (blue binder to left of the TGA), and Curie standards may be found in the drawer below the TGA.<br>
+
+<u>NOTE 3:</u>  The blue keys in the 2nd row on the left of the computer keyboard ("direct control" section) may be used to cancel a run before it has finished.  The keys are labelled with self-explanatory names.</li>
+
+</ol>
+
+<h3>After the run</h3>
+
+<ol>
+<li>Lower the glass tube and furnace assembly and remove the basket from the hangdown wire.  Clean the pan and replace it on the hangdown wire for the next user.  Raise the glass tube and furnace assembly back into position.  Turn off the gas flow.</li>
+
+<li>Turn the heater control unit from <b>heat</b> to <b>off</b>.</li>
+
+<li>On the computer keyboard, press <b>go to analysis</b>.  This is a blue key and will be found along the top left of the keyboard.<br>
+	
+If you do not want to do the analysis and plotting immediately, hit the <b>save</b> button when the COMMAND: prompt appears on the screen.  This is a blue button along the top row of the computer keyboard.  Enter a (5 character max) filename, and hit <b>return,</B> then enter comments (max number of characters unknown) and hit <B>return</B>.  This will save your file as filename.TG onto the data disk in Drive B.</li>
+
+<li>Put paper into the plotter; put pens in positions 1 and 2 on the pen carousel.</li>
+
+<li>
+The functions available in the analysis section of the program may be accessed by hitting the appropriate blue key on the computer keyboard when the COMMAND: prompt appears on the monitor.  For functions which require you to enter limits, the <b>arrow</b> keys on the far right of the computer keyboard may be used to set the position of the vertical bar cursor that appears on the screen.  The computer will beep each time the <b>arrow</b> keys are used to change a limit value.  To toggle between the left and right cursors on the monitor (e.g. Temp 1 and Temp 2), hit the <b>H</b> key in the center of the arrow-key pad.<br>
+
+A brief description of what each blue key function does, and how to use it, follows.  Hitting the blue key marked <B>options</B> will display this list as well.<br> 
+
+<B>Content:</B> provides a directory of the files on the data disk. <br>
+
+<B>Recall:</b> loads into the memory a file saved on the data disk.  When you enter the file name, leave off the .TG suffix. <br>
+
+<B>Save:</b> saves the file to the data disk.  Again, don't add a .TG (or anything else) suffix.  File names are limited to five characters. <br>
+
+After you have recalled a file, or if you are coming to the analysis unit directly from having collected the data, the plot will appear on the screen, using the <u>T-min</u> and <u>T-final</u> values for the x-axis and the 0 and <u>Y-range</u> values for the y-axis. <br>
+
+<B>Rescale T:</b>  permits you to use the <B>arrow</b> keys (see above) on the left of the computer keyboard to set new x-axis values for plotting.  You cannot plot beyond <u>T-min</u> or <u>T-final.</u>  Hit <B>return</b> when done positioning the vertical cursors on the screen; the computer will redraw the plot. <br>
+
+<B>Y-Shift:</b>  permits you to use the <B>arrow</b> keys (see above) on the left of the computer keyboard to shift the ordinate up or down.  Hit <B>return</b> when done, and the computer will redraw the plot. <br>
+
+<B>Rescale Y:</b> permits you to use the <B>arrow</b> keys (see above) on the left of the computer keyboard to expand or contract the y-axis.  The computer will redraw the plot after each arrow key stroke. <br>
+
+<B>Restore original:</b>  hitting this key will undo all of the changes you made to the plot, and redraw the plot as it was originally. <br>
+
+<B>Onset:</b>  permits you to places cursors using the arrow keys (see above) on the left of the computer keyboard to mark off an event.  Hit <B>return</b> when you are done placing the vertical cursor bars on the screen, and the computer will calculate the onset of the event. <br>
+
+<B>Deriv:</b> the computer will display the curve and its first derivative.<br>
+
+<B>Wt%:</b> permits you to use the <B>arrow</b> keys (see above) on the left of the computer keyboard to mark the start and end of an event.  Hit <B>return</b> when you are done positioning the vertical cursor bars on the screen, and the computer will find the percent weight loss (or gain) between the two marked points.</LI>
+
+<Li>To plot the image on your screen (WYSIWYG, more or less), press <B>Plot screen</b> key on the computer keyboard.  Press Y, then <B>return, </b> to begin plotting.</LI>  
+
+<LI>When finished, turn off the plotter, the interface, the computer, and the System 4 controller.</LI>
+
+</OL>
+
+

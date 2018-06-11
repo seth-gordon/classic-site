@@ -1,0 +1,50 @@
+BODY { color: #000; background-color: #FFC }
+
+/* CCC = light gray
+   CCF = periwinkle blue
+   CFC = light green
+   CFF = light blue
+   FCC = magenta
+   FCF = purple
+   FFC = light yellow
+   FFF = white
+*/
+
+.comment
+ { color: #C00 ; text-decoration: none }
+.comment A:link { color: #C09 ; text-decoration: underline }
+.comment A:visited { color: #900 ; text-decoration: underline }
+.comment A:active { color: #F00 ; text-decoration: underline }
+
+@media screen { /* hide from IE3 */
+a[href]:hover { background: #FFF }
+}
+
+.newterm { font-style: italic }
+
+.myname { font-size: x-large; font-weight: bold; text-align: center }
+.myslogan { font-size: large; font-weight: bolder; text-align: center }
+.mycontactinfo { text-align: center }
+.subhead { font-weight: bold; margin-top: 1em }
+
+UL { margin-top: 0em; margin-bottom: 0em; padding-top: 0.25em }
+
+OL { list-style-type: decimal }
+OL OL { list-style-type: lower-alpha }
+OL OL OL { list-style-type: lower-roman }
+
+H5 { font-size: 100%; font-style: italic; font-weight: normal;
+     margin-top: 1em; margin-bottom: 0em }
+H4 { font-size: 100%; font-weight: bold; margin-top: 1em; margin-bottom: 0em }
+
+SUP { font-size: smaller }
+
+P { margin-top: 0pt; margin-bottom: 0pt; text-indent: 0.2in }
+P.stb { margin-top: 12pt }
+P.mtb { margin-top: 24pt; text-indent: 0in }
+P.ltb { margin-top: 36pt; text-indent: 0in }
+
+p.marginnote { background-color: #E0E0E0 }
+
+
+

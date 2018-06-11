@@ -1,0 +1,78 @@
+Linux version 2.2.5-15 (root@porky.devel.redhat.com) (gcc version egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)) #1 Mon Apr 19 22:21:09 EDT 1999
+Detected 99717867 Hz processor.
+Console: colour VGA+ 80x25
+Calibrating delay loop... 39.73 BogoMIPS
+Memory: 46920k/49152k available (996k kernel code, 412k reserved, 764k data, 60k init)
+VFS: Diskquotas version dquot_6.4.0 initialized
+CPU: Intel Pentium 75 - 200 stepping 06
+Checking 386/387 coupling... OK, FPU using exception 16 error reporting.
+Checking 'hlt' instruction... OK.
+Intel Pentium with F0 0F bug - workaround enabled.
+POSIX conformance testing by UNIFIX
+PCI: PCI BIOS revision 2.10 entry at 0xfd8c1
+PCI: Using configuration type 1
+PCI: Probing PCI hardware
+Linux NET4.0 for Linux 2.2
+Based upon Swansea University Computer Society NET3.039
+NET4: Unix domain sockets 1.0 for Linux NET4.0.
+NET4: Linux TCP/IP 1.0 for NET4.0
+IP Protocols: ICMP, UDP, TCP, IGMP
+Initializing RT netlink socket
+Starting kswapd v 1.5 
+Detected PS/2 Mouse Port.
+Serial driver version 4.27 with MANY_PORTS MULTIPORT SHARE_IRQ enabled
+ttyS00 at 0x03f8 (irq = 4) is a 16550A
+ttyS01 at 0x02f8 (irq = 3) is a 16550A
+ttyS02 at 0x03e8 (irq = 4) is a 16550A
+ttyS03 at 0x02e8 (irq = 3) is a 16550A
+pty: 256 Unix98 ptys configured
+apm: BIOS version 1.1 Flags 0x03 (Driver version 1.9)
+Real Time Clock Driver v1.09
+RAM disk driver initialized:  16 RAM disks of 4096K size
+PIIX: IDE controller on PCI bus 00 dev 38
+PIIX: not 100% native mode: will probe irqs later
+PIIX: neither IDE port enabled (BIOS)
+hda: Maxtor 83500D4, ATA DISK drive
+hdb: probing with STATUS(0x00) instead of ALTSTATUS(0x50)
+hdb: probing with STATUS(0x00) instead of ALTSTATUS(0x50)
+hdc: SAMSUNG CD-ROM SC-148F, ATAPI CDROM drive
+ide2: ports already in use, skipping probe
+ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+ide1 at 0x170-0x177,0x376 on irq 15
+hda: Maxtor 83500D4, 3339MB w/256kB Cache, CHS=848/128/63
+hdc: ATAPI 48X CD-ROM drive, 128kB Cache
+Uniform CDROM driver Revision: 2.54
+Floppy drive(s): fd0 is 1.44M
+FDC 0 is a National Semiconductor PC87306
+md driver 0.90.0 MAX_MD_DEVS=256, MAX_REAL=12
+raid5: measuring checksumming speed
+   8regs     :   106.299 MB/sec
+   32regs    :    93.345 MB/sec
+using fastest function: 8regs (106.299 MB/sec)
+scsi : 0 hosts.
+scsi : detected total.
+md.c: sizeof(mdp_super_t) = 4096
+Partition check:
+ hda: hda1 hda2 < hda5 hda6 hda7 >
+autodetecting RAID arrays
+autorun ...
+... autorun DONE.
+VFS: Mounted root (ext2 filesystem) readonly.
+Freeing unused kernel memory: 60k freed
+Adding Swap: 100764k swap-space (priority -1)
+eth0: 3c509 at 0x300 tag 1, 10baseT port, address  00 20 af ea bb b9, IRQ 10.
+3c509.c:1.16 (2.2) 2/3/98 becker@cesdis.gsfc.nasa.gov.
+eth0: Setting Rx mode to 1 addresses.
+Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+nfsd_init: initialized fhcache, entries=256
+VFS: Disk change detected on device ide1(22,0)
+ISO 9660 Extensions: Microsoft Joliet Level 1
+ISO 9660 Extensions: RRIP_1991A
+hdc: command error: status=0x51 { DriveReady SeekComplete Error }
+hdc: command error: error=0x54
+end_request: I/O error, dev 16:00 (hdc), sector 624096
+hdc: irq timeout: status=0xd0 { Busy }
+hdc: ATAPI reset complete
+ATAPI device hdc:
+  Error: Illegal request -- (Sense key=0x05)
+  Illegal mode for this track or incompatible medium -- (asc=0x64, ascq=0x00)

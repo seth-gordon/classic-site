@@ -1,0 +1,80 @@
+Received: from ihrh2.emsr.lucent.com ([135.1.218.64]) by gateway2.kenan.com
+with SMTP (Microsoft Exchange Internet Mail Service Version 5.5.2650.21)
+id HBF4XWZW; Mon, 19 Mar 2001 16:22:58 -0500
+Received: from ihemail1.firewall.lucent.com by ihrh2.emsr.lucent.com 
+(8.8.8+Sun/EMS-1.5 Solaris/emsr)
+id PAA11368; Mon, 19 Mar 2001 15:16:55 -0600 (CST)
+Received: from ihemail1.firewall.lucent.com (localhost [127.0.0.1])
+by ihemail1.firewall.lucent.com (Pro-8.9.3/8.9.3) with ESMTP id
+QAA27648
+for <SGordon@kenan.com>; Mon, 19 Mar 2001 16:16:54 -0500 (EST)
+Received: from ghost1.onet.pl (ghost1.onet.pl [194.204.190.201])
+by ihemail1.firewall.lucent.com (Pro-8.9.3/8.9.3) with ESMTP id
+QAA27457
+for <sethgordon@lucent.com>; Mon, 19 Mar 2001 16:16:47 -0500 (EST)
+Received: from pa165.czestochowa.sdi.tpnet.pl ([213.76.193.165]:57351 "EHLO
+smtp.poczta.onet.pl") by ghost1.onet.pl with ESMTP
+id <S178839AbRCSVQQ>; Mon, 19 Mar 2001 22:16:16 +0100
+X-Sender: postmaster11@poczta.onet.pl
+From: postmaster <postmaster11@poczta.onet.pl>
+To: "delivery failure" <postmaster11@poczta.onet.pl>
+Date: Mon, 19 Mar 2001 22:22:48 +0100
+Subject: delivery failure
+MIME-Version: 1.0
+Content-Type: multipart/related;
+boundary="----=_NextPart_000_001__5468376_80568,33"
+Message-Id: <20010319211626Z178839-24231+17349@ghost1.onet.pl>
+
+This is a Multipart MIME message.
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: multipart/alternative;
+boundary="----=_NextPart_001_002__5468376_80568,33"
+
+
+------=_NextPart_001_002__5468376_80568,33
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 7bit
+
+------=_NextPart_001_002__5468376_80568,33
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: base64
+
+------=_NextPart_001_002__5468376_80568,33--
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="paypal_logo.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <54684119041@paypal_logo.gif>
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="button_signup.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <54684318581@button_signup.gif>
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="button_login.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <546845628977@button_login.gif>
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="pixel.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <546849618922@pixel.gif>
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="nav_ext_none.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <546854620587@nav_ext_none.gif>
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="step_arrow_1.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <54687363192@step_arrow_1.gif>
+
+------=_NextPart_000_001__5468376_80568,33
+Content-Type: image/gif; name="secure_lock_2.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <546882127888@secure_lock_2.gif>
+
+------=_NextPart_000_001__5468376_80568,33--

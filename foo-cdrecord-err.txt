@@ -1,0 +1,1039 @@
+scsidev: '0,0,0'
+scsibus: 0 target: 0 lun: 0
+Linux sg driver version: 3.1.19
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'inquiry' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  12 00 00 00 24 00
+cmd finished after 0.000s timeout 40s
+Inquiry Data   : 05 80 00 21 33 00 00 00 50 48 49 4C 49 50 53 20 50 43 52 57 38 30 34 20 20 20 20 20 20 20 20 20 20 32 2C 31
+
+Executing 'inquiry' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  12 00 00 00 38 00
+cmd finished after 0.000s timeout 40s
+Inquiry Data   : 05 80 00 21 33 00 00 00 50 48 49 4C 49 50 53 20 50 43 52 57 38 30 34 20 20 20 20 20 20 20 20 20 20 32 2C 31 34 56 4F 34 31 31 31 44 45 30 33 34 35 30 20 20 30 30 35 34
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 3F 00 00 00 00 00 08 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 A2 71 00 00 00 00 00
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 02 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C
+Mode Sense Data (converted) 19
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Page  Data 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 3F 00 00 00 00 00 08 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 A2 71 00 00 00 00 00
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 02 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C
+Mode Sense Data (converted) 19
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Page  Data 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 3F 00 00 00 00 00 08 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 A2 71 00 00 00 00 00
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 02 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C
+Mode Sense Data (converted) 19
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Page  Data 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 02 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C
+Mode Sense Data (converted) 19
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Page  Data 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'mode sense g1' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  5A 00 2A 00 00 00 00 00 1E 00
+cmd finished after 0.001s timeout 40s
+Mode Sense Data 00 1C 71 00 00 00 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data (converted) 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Mode Sense Data 19 71 00 00 2A 14 07 07 75 63 29 03 16 10 00 02 08 00 16 10 00 00 05 83 05 83
+Cdrecord 1.10 (i686-pc-linux-gnu) Copyright (C) 1995-2001 Jörg Schilling
+Using libscg version 'schily-0.5'
+Inquiry Data   : ...!3...PHILIPS PCRW804          2,14VO4111DE03450  0054
+Device type    : Removable CD-ROM
+Version        : 0
+Response Format: 1
+Vendor_info    : 'PHILIPS '
+Identifikation : 'PCRW804         '
+Revision       : ' 2,1'
+Device seems to be: Generic mmc CD-RW.
+Using generic SCSI-3/mmc CD-R driver (mmc_cdr).
+Driver flags   : SWABAUDIO
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 3A 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x3A Qual 0x00 (medium not present) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'start/stop unit' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  1B 00 00 00 03 00
+cmd finished after 0.000s timeout 40s
+
+Executing 'start/stop unit' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  1B 00 00 00 01 00
+cmd finished after 18.682s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.002s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.002s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.018s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.157s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 13 00 00 00 00 04 01 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x04 Qual 0x01 (logical unit is in process of becoming ready) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'test unit ready' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  00 00 00 00 00 00
+cdrecord: Input/output error. test unit ready: scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 03 00 00 00 00 13 00 00 00 00 57 00 00 00
+Sense Key: 0x3 Medium Error, Segment 0
+Sense Code: 0x57 Qual 0x00 (unable to recover table-of-contents) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.001s timeout 40s
+
+Executing 'prevent/allow medium removal' command on Bus 0 Target 0, Lun 0 timeout 40s
+CDB:  1E 00 00 00 00 00
+cmd finished after 0.000s timeout 40s
+cdrecord: CD/DVD-Recorder not ready.

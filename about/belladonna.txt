@@ -1,0 +1,98 @@
+klogd 1.4.1#10, log source = /proc/kmsg started.
+Inspecting /boot/System.map-2.2.20
+Loaded 9818 symbols from /boot/System.map-2.2.20.
+Symbols match kernel version 2.2.20.
+Loaded 35 symbols from 3 modules.
+Linux version 2.2.20 (herbert@gondolin) (gcc version 2.7.2.3) #1 Sat Apr 20 11:45:28 EST 2002
+BIOS-provided physical RAM map:
+ BIOS-e820: 0009e000 @ 00000000 (usable)
+ BIOS-e820: 0edf0000 @ 00100000 (usable)
+ BIOS-e820: 00100000 @ 0ef00000 (usable)
+Detected 996584 kHz processor.
+Console: colour VGA+ 80x25
+Calibrating delay loop... 1985.74 BogoMIPS
+Memory: 240572k/245760k available (1756k kernel code, 480k reserved, 2800k data, 152k init)
+Dentry hash table entries: 32768 (order 6, 256k)
+Buffer cache hash table entries: 262144 (order 8, 1024k)
+Page cache hash table entries: 65536 (order 6, 256k)
+VFS: Diskquotas version dquot_6.4.0 initialized
+CPU: L1 I Cache: 64K  L1 D Cache: 64K
+CPU: L2 Cache: 64K
+CPU: AMD mobile AMD Duron(tm) Processor stepping 01
+Checking 386/387 coupling... OK, FPU using exception 16 error reporting.
+Checking 'hlt' instruction... OK.
+Checking for popad bug... OK.
+POSIX conformance testing by UNIFIX
+mtrr: v1.35a (19990819) Richard Gooch (rgooch@atnf.csiro.au)
+PCI: PCI BIOS revision 2.10 entry at 0xfd7ae
+PCI: Using configuration type 1
+PCI: Probing PCI hardware
+Linux NET4.0 for Linux 2.2
+Based upon Swansea University Computer Society NET3.039
+NET4: Linux TCP/IP 1.0 for NET4.0
+IP Protocols: ICMP, UDP, TCP, IGMP
+TCP: Hash tables configured (ehash 262144 bhash 65536)
+Starting kswapd v 1.5 
+Serial driver version 4.27 with HUB-6 MANY_PORTS MULTIPORT SHARE_IRQ enabled
+pty: 256 Unix98 ptys configured
+Real Time Clock Driver v1.09
+RAM disk driver initialized:  16 RAM disks of 4096K size
+loop: registered device at major 7
+VP_IDE: IDE controller on PCI bus 00 dev 39
+VP_IDE: not 100%% native mode: will probe irqs later
+    ide0: BM-DMA at 0x1840-0x1847, BIOS settings: hda:DMA, hdb:pio
+    ide1: BM-DMA at 0x1848-0x184f, BIOS settings: hdc:DMA, hdd:pio
+hda: IBM-DJSA-220, ATA DISK drive
+hdc: TOSHIBA DVD-ROM SD-C2502, ATAPI CDROM drive
+ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+ide1 at 0x170-0x177,0x376 on irq 15
+hda: IBM-DJSA-220, 19077MB w/1874kB Cache, CHS=2432/255/63
+hdc: ATAPI 24X DVD-ROM drive, 128kB Cache
+Uniform CD-ROM driver Revision: 3.11
+Floppy drive(s): fd0 is 1.44M
+FDC 0 is a post-1991 82077
+md driver 0.36.6 MAX_MD_DEV=4, MAX_REAL=8
+scsi: <fdomain> Detection failed (no card)
+NCR53c406a: no available ports found
+sym53c416.c: Version 1.0.0
+Failed initialization of WD-7000 SCSI card!
+IBM MCA SCSI: Version 3.2
+IBM MCA SCSI: No Microchannel-bus present --> Aborting.
+              This machine does not have any IBM MCA-bus
+              or the MCA-Kernel-support is not enabled!
+megaraid: v1.11 (Aug 23, 2000)
+aec671x_detect: 
+3ware Storage Controller device driver for Linux v1.02.00.008.
+3w-xxxx: tw_findcards(): No cards found.
+scsi : 0 hosts.
+scsi : detected total.
+Partition check:
+ hda: hda1 hda2 < hda5 hda6 hda7 hda8 hda9 hda10 hda11 hda12 hda13 >
+apm: BIOS version 1.2 Flags 0x03 (Driver version 1.13)
+apm: disabled on user request.
+VFS: Mounted root (ext2 filesystem) readonly.
+Freeing unused kernel memory: 152k freed
+NET4: Unix domain sockets 1.0 for Linux NET4.0.
+Adding Swap: 811240k swap-space (priority -1)
+PCI: Enabling bus mastering for device 00:58
+eth0: 8139too Fast Ethernet driver 0.9.18-pre4 Jeff Garzik <jgarzik@mandrakesoft.com>
+eth0: Linux-2.2 bug reports to Jens David <dg1kjd@afthd.tu-darmstadt.de>
+eth0: RealTek RTL8139 Fast Ethernet board found at 0xcf879000, IRQ 11
+eth0: Chip is 'RTL-8139C' - MAC address '00:08:02:05:5d:1e'.
+eth0: Setting half-duplex based on auto-negotiated partner ability 0000.
+: restarted
+Linux PCMCIA Card Services 3.1.33
+  kernel build: 2.2.20 #1 Sat Apr 20 11:45:28 EST 2002
+  options:  [pci] [cardbus] [apm]
+PCI routing table version 1.0 at 0xfdf50
+Intel ISA/PCI/CardBus PCIC probe:
+  TI 1410 rev 01 PCI-to-CardBus at slot 00:0a, mem 0xffbfe000
+    host opts [0]: [ring] [pci + serial irq] [pci irq 11] [lat 32/176] [bus 32/34]
+    ISA irqs (scanned) = 3,10 PCI status changes
+cs: memory probe 0xa0000000-0xa0ffffff: clean.
+cs: IO port probe 0x0100-0x04ff: excluding 0x378-0x37f 0x4d0-0x4d7
+cs: IO port probe 0x0380-0x04cf: clean.
+cs: IO port probe 0x04d8-0x04ff: clean.
+cs: IO port probe 0x0800-0x08ff: clean.
+cs: IO port probe 0x0a00-0x0aff: clean.
+cs: IO port probe 0x0c00-0x0cff: excluding 0xcf8-0xcff
